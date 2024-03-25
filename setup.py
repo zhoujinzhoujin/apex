@@ -29,7 +29,7 @@ def check_cuda_torch_binary_vs_bare_metal(cuda_dir):
 
     print("\nCompiling cuda extensions with")
     print(raw_output + "from " + cuda_dir + "/bin\n")
-
+'''
     if (bare_metal_major != torch_binary_major) or (bare_metal_minor != torch_binary_minor):
         raise RuntimeError(
             "Cuda extensions are being compiled with a version of Cuda that does "
@@ -39,7 +39,7 @@ def check_cuda_torch_binary_vs_bare_metal(cuda_dir):
             "https://github.com/NVIDIA/apex/pull/323#discussion_r287021798.  "
             "You can try commenting out this check (at your own risk)."
         )
-
+'''
 
 def raise_if_cuda_home_none(global_option: str) -> None:
     if CUDA_HOME is not None:
